@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+/*importing google noto sans font  */
+body,
+html {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Noto Sans", sans-serif;
+  height: 100%;
+}
+.container {
+  /* A gradient with a single color of red  => linear-gradient(red)*/
+
+  /* A gradient tilted 45 degrees,
+   starting blue and finishing red => linear-gradient(45deg, blue, red)*/
+
+  /* A gradient going from the bottom right to the top left corner,
+   starting blue and finishing red  => linear-gradient(to left top, blue, red)
+   */
+
+  /* Interpolation in rectangular color space => linear-gradient(in oklab, blue, red)*/
+
+  /* Interpolation in polar color space =>
+linear-gradient(in hsl, blue, red) */
+
+  /* Interpolation in polar color space
+  with longer hue interpolation method => linear-gradient(in hsl longer hue, blue, red)
+*/
+
+  /* Color stop: A gradient going from the bottom to top,starting blue, turning green at 40% of its length,and finishing red => 
+   linear-gradient(0deg, blue, green 40%, red)*/
+
+  /* Color hint: A gradient going from the left to right,starting red, getting to the midpoint color10% of the way across the length of the gradient,taking the rest of the 90% of the length to change to blue => 
+linear-gradient(.25turn, red, 10%, blue)*/
+
+  /* Multi-position color stop: A gradient tilted 45 degrees,with a red bottom-left half and a blue top-right half,with a hard line where the gradient changes from red to blue => 
+linear-gradient(45deg, red 0 50%, blue 50% 100%)*/
+
+  background: linear-gradient(135deg, #8a2be2, #4169e1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.content {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 300px;
+}
+.logo {
+  width: 100px;
+  object-fit: contain;
+}
+h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+p {
+  color: #666;
+  margin-bottom: 20px;
+  
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+input[type="email"] {
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 1rem;
+}
+button {
+  padding: 0.5rem;
+  background-color: #8a2be2;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+  transition: background-color 0.3s ease-in-out;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+}
+button:hover {
+  background-color: #000;
+}
