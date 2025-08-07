@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>media</title>
+  </head>
+  <body>
+    <h1>This is media learning page.</h1>
+    <img
+      src="./images/myPhoto.jpg"
+      title="Aditya"
+      alt="profile photo"
+      width="100px"
+    />
+    <p>Aditya</p>
+    <figure>
+      <img src="./images/myPhoto.jpg" alt="profile pic" width="100px" />
+      <figcaption>Aditya</figcaption>
+    </figure>
+    <video
+      width="500"
+      controls
+      controlslist="nofullscreen nodownload noremoteplayback noplaybackrate foobar"
+    >
+      <!-- controls is very imp to control -->
+      <source src="./videos/flower.webm" type="video/webm" />
+
+      <source src="./videos/flower.mp4" type="video/mp4" />
+
+      Download the
+      <a href="./videos/flower.webm">WEBM</a>
+      or
+      <a href="./videos/flower.mp4">MP4</a>
+      video.
+    </video>
+    <a href="https://www.google.com/" target="_blank">google</a>
+
+    <!-- target="_blank" => use for apen link in new tab -->
+     
+    <label for="progress"> 70% </label>
+    <progress value="70" max="100" id="progress"></progress>
+  </body>
+</html>

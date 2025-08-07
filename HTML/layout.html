@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>layout</title>
+    <link rel="stylesheet" href="./output.css" />
+    
+  </head>
+  <body class="bg-slate-800">
+    <h1 class="text-white flex justify-center items-center font-bold text-4xl">
+      Eqauls
+    </h1>
+    <div class="grid m-4 gap-4 sm:grid-cols-2">
+      <div class="min-h-[50px] rounded-lg bg-orange-400 shadow"></div>
+      <div class="min-h-[50px] rounded-lg bg-teal-400 shadow"></div>
+    </div>
+    <div class="grid gap-4 m-4 sm:grid-cols-3">
+      <div class="min-h-[100px] rounded-xl bg-rose-400 shadow"></div>
+      <div class="min-h-[100px] rounded-xl bg-purple-400 shadow"></div>
+      <div class="min-h-[100px] rounded-xl bg-green-400 shadow"></div>
+      <div class="min-h-[100px] rounded-xl bg-blue-400 shadow"></div>
+    </div>
+    <hr />
+    <header>
+      <h1
+        class="text-white flex justify-center items-center font-bold text-4xl"
+      >
+        Non Equals
+      </h1>
+      <div class="m-4 bg-amber-50 p-8 grid gap-4 sm:grid-cols-12">
+        <div class="min-h-[50px] rounded-lg bg-red-400 sm:col-span-2 sm:block hidden"></div>
+        <div class="min-h-[50px] rounded-lg bg-green-400 sm:col-span-8"></div>
+        <div
+          class="min-h-[50px] rounded-lg bg-purple-400 sm:col-span-2 sm:block hidden"
+        ></div>
+      </div>
+      <hr />
+      <div class="grid gap-1 grid-cols-12">
+        <div
+          class="col-span-2 min-h-[50px] m-4 rounded-xl bg-sky-600 shadow-purple-400"
+        ></div>
+        <div
+          class="col-span-10 min-h-[50px] m-4 rounded-xl bg-pink-600 shadow-rose-400"
+        ></div>
+      </div>
+    </header>
+    <!-- Main layout: vertical navbar + content -->
+    <div class="grid grid-cols-[200px_1fr]">
+      <!-- Sidebar (Vertical Navbar) -->
+      <aside class="bg-white text-white p-4 space-y-4">
+        <div class="bg-purple-400 p-2 rounded">Nav 1</div>
+        <div class="bg-purple-400 p-2 rounded">Nav 2</div>
+        <div class="bg-purple-400 p-2 rounded">Nav 3</div>
+        <div class="bg-purple-400 p-2 rounded">Nav 4</div>
+      </aside>
+
+      <!-- Main Content Area -->
+      <main class="bg-gray-100 p-6">
+        <div class="grid md:grid-cols-3 gap-4">
+          <div class="bg-pink-400 p-4 rounded shadow">Main Div 1</div>
+          <div class="bg-green-400 p-4 rounded shadow">Main Div 2</div>
+          <div class="bg-red-400 p-4 rounded shadow">Main Div 3</div>
+          <div class="bg-blue-400 p-4 rounded shadow">Main Div 4</div>
+          <div class="bg-yellow-200 p-4 rounded shadow">Main Div 5</div>
+          <div class="bg-sky-500 p-4 rounded shadow">Main Div 6</div>
+        </div>
+      </main>
+    </div>
+    <!-- Footer -->
+    <footer class="bg-gray-300 text-white p-4">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+        <div class="bg-blue-800 p-2 rounded min-h-[100px]">Footer 1</div>
+        <div class="bg-blue-800 p-2 rounded min-h-[100px]">Footer 2</div>
+        <div class="bg-blue-800 p-2 rounded min-h-[100px]">Footer 3</div>
+        <div class="bg-blue-800 p-2 rounded min-h-[100px]">Footer 4</div>
+      </div>
+    </footer>
+  </body>
+</html>
