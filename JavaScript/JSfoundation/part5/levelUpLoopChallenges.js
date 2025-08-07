@@ -7,4 +7,3 @@ for (let i = 0; i < Teas.length; i++) {
 }
 console.log(selectedTeas);
 
-//////
