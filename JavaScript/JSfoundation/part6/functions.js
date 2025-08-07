@@ -45,8 +45,38 @@ let totalCost = calculateTotal(10,45);
 console.log(totalCost);
 
 /*
-4. write a function named 'processTeaOrder' that akes lanother function , "makeTea" , as a parameter and calls it with the arguments "early grey"
-return the result rof calling "makeTea"
+4. write a function named 'processTeaOrder' that takes another function , "makeTea" , as a parameter and calls it with the arguments "early grey"
+return the result of calling "makeTea"
 */
-// ...............
- 
+
+// higher order function -> that function takes another function as a parameter.
+function makeTea(typeOfTea) {
+    return `${typeOfTea} tea is ready`;
+    
+}
+function processTeaOrder(teafunction){
+    return makeTea("early grey")
+}
+let order = processTeaOrder(makeTea);
+console.log(order);
+
+ /*
+ 5.write a function named "createTeaMaker" that returns another function. the return function should take one parameter 'teaType' and returns a message "making green tea".
+ Store the returned function in a variable named "teamaker" and call it with "green tea"
+ */
+function createTeaMaker(name) { // higher order function
+    let score = 100;
+
+    // Return an inner function
+    return function(teaType) { // anonymous function : function without name
+        return `making ${teaType} by ${name} with score ${score}`;
+    };
+
+    // Inner functions can access parent function variables (like `name` and `score`)
+}
+
+let teaMaker = createTeaMaker("Aditya");
+let output = teaMaker("green tea");
+
+console.log(result); // Output: making green tea by Aditya with score 100
+
