@@ -41,4 +41,30 @@ const findLongestWord = (arr) =>
 
 
 
+// higher order : jb hum ek funcn ko dusre function me as an argument pass krte hai toh woh hiigher order function hota hai
+
+const formulaOfArea = function(r){ 
+    //higher order funcn
+    return Math.PI * r**2;
+};
+const formulaOfCircumference = function(r){ 
+    //higher order funcn
+    return 2 * Math.PI * r;
+};
+
+
+const calculate = function(radiusArray,formula){
+    const result = [];
+    for (let i = 0; i < radiusArray.length; i++) {
+      const a = formula(radiusArray[i]);
+      result.push(a);
+    }
+    return result;
+    
+};
+const ans1 = calculate(radius,formulaOfArea);
+console.log(ans1);
+const ans2 = calculate(radius,formulaOfCircumference);
+console.log(ans2);
+
 
