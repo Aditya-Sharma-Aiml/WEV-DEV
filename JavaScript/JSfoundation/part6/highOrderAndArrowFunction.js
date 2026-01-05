@@ -21,8 +21,6 @@ const filterEvenNumbers = (arr) => arr.filter((num) => num % 2 == 0);
 const sumPositiveNumbers = (arr) =>
   arr.filter((num) => num > 0).reduce((sum, num) => sum + num, 0);
 
-
-
 // Task 4: Transform Array of Objects
 
 // Write a function getNames(arr) that takes an array of objects where each object has a name property, and returns an array of just the names using map() and arrow functions
