@@ -1,4 +1,4 @@
-//example 1
+//Example 1: Accessing DOM Elements
 
 document
   .getElementById("changeTextButton")
@@ -7,7 +7,7 @@ document
     paragraph.textContent = "the paragraph is changed";
   });
 
-//example 2
+//Example 2: Traversing the DOM 
 
 document
   .getElementById("highlightFirstCity")
@@ -16,7 +16,7 @@ document
     citiesList.firstElementChild.classList.add("highlight");
   });
 
-//example 3
+//Example 3: Manipulating DOM Elements 
 
 document.getElementById("changeOrder").addEventListener("click", function () {
   let coffeeType = document.getElementById("coffeeType");
@@ -25,15 +25,17 @@ document.getElementById("changeOrder").addEventListener("click", function () {
   coffeeType.style.padding = "5px";
 });
 
-//example 4
+//Example 4: Creating and Inserting Elements
 document.getElementById("addNewItem").addEventListener("click", function () {
+
+  // creating new Element
   let newItem = document.createElement("li");
   newItem.textContent = "Eggs";
-
+  // appending
   document.getElementById("shoppingList").appendChild(newItem);
 });
 
-//example 5
+//Example 5: Removing DOM Elements 
 document
   .getElementById("removeLastTask")
   .addEventListener("click", function () {
@@ -41,45 +43,74 @@ document
     taskList.lastElementChild.remove();
   });
 
-// example 6
-
+//Example 6: Event Handling in the DOM 
 document
   .getElementById("clickMeButton")
   .addEventListener("dblclick", function () {
+    // after double click alert will pop up
     alert("chaicode");
   });
 
-// example 7
+// Example 7: Event Delegation 
 
 document.getElementById("teaList").addEventListener("click", function (event) {
+
+  //target the which you selected ->
+  // console.log(event.target);
+  
   if (event.target && event.target.matches(".teaItem")) {
+    //event target the only matches of class -> teaItem not others
     alert("You selected: " + event.target.textContent);
+  }
+  else if(event.target && event.target.matches(".notTeaItem")){
+    alert(`you choosed ${event.target.textContent}, not the tea item`);
   }
 });
 
-//example 8
+// Example 8: Form Handling 
 
 document
   .getElementById("feedbackForm")
   .addEventListener("submit", function (event) {
-    event.preventDefault();
-    let feedback = document.getElementById("feedbackInput").value;
+
+    // prevent the default behavior when you submit the form -> to submit
+    event.preventDefault(); // imp
+
+    let feedback = document.getElementById("feedbackInput").value; // grabing value of the feedback have you written
     console.log(feedback);
-    document.getElementById(
-      "feedbackDisplay"
-    ).textContent = `Feedback is: ${feedback}`;
+
+    // display the feedback content
+    let feedbackContent = document.getElementById( "feedbackDisplay");
+    feedbackContent.textContent = `Feedback is: ${feedback}`;
+
+    // adding styles
+    feedbackContent.style.backgroundColor = "yellow";
+    feedbackContent.style.padding = "10px";
+    feedbackContent.style.color = "black";
+
+
   });
 
-//example 9
+//Example 9: DOM Content Loaded 
 
 document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("domStatus").textContent = "DOM fully loaded";
 });
 
-//example 10
+//Example 10: CSS Classes Manipulation 
 document
   .getElementById("toggleHighlight")
   .addEventListener("click", function () {
     let descriptionText = document.getElementById("descriptionText");
-    descriptionText.classList.toggle("highlight");
+
+    // ye id="descriptionText" wale element me ek class add kr dega  then when you click button apply .highlight css property but not toggle the property
+
+    // descriptionText.classList.add("highlight");
+
+    descriptionText.classList.toggle("highlight"); // toggle the highlight class css property
   });
+
+  // getElementByTagName
+  let tags = document.getElementById("tag");
+  tags.getElementsByTagName("h3");
+  tags.getElementsByTagName("a");
