@@ -39,7 +39,7 @@ let cat = new Animal("cat");
 
 function Drink(name) {
   if (!new.target) {
-    throw new Error("Drink must be called with new keyword");
+    throw new Error("Drink must be called with `new` keyword");
   }
   this.name = name;
 }

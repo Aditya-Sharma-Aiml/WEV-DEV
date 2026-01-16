@@ -34,9 +34,11 @@ let myNewArray = [1, 2, 3, 4, 5, 6];
 // console.log(myNewArray.hitesh());
 
 class Vehicle {
+
   constructor(make, model) {
     this.make = make;
     this.model = model;
+    
   }
 
   start() {

@@ -1,7 +1,8 @@
 function fetchUserData() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      reject({ name: "chaicode", url: "https://chaicode.com" });
+      resolve({ name: "chaicode", url: "https://chaicode.com" });
+      // reject({ name: "chaicode", url: "https://chaicode.com" });
     }, 3000);
   });
 }
@@ -9,10 +10,11 @@ function fetchUserData() {
 async function getUserData() {
   try {
     console.log("Fetching user data...");
+
     const userData = await fetchUserData();
+    console.log("User data: ", userData);
     console.log("User data fetched successfully");
 
-    console.log("User data: ", userData);
   } catch (error) {
     console.log("Error fetching data", error);
   }

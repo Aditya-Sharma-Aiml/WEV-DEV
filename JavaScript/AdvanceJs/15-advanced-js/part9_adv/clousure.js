@@ -10,3 +10,4 @@ let increment = outer();
 console.log(increment());
 console.log(increment());
 console.log(increment());
+
